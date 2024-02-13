@@ -1,5 +1,12 @@
 const form = document.querySelector('#form');
 
+const messageConfirmation = document.createElement('div');
+messageConfirmation.className = 'message-confirmation';
+messageConfirmation.textContent = 'Merci ! Votre formulaire a bien été validé.';
+messageConfirmation.style.display = 'none';
+
+document.body.appendChild(messageConfirmation);
+
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -40,11 +47,14 @@ form.addEventListener('submit', function (event) {
 
     }
 
-    if (document.querySelectorAll('.error-message').length > 0) {
+    if (erreurs.length > 0) {
         return;
     }
 
-    form.submit();
+    messageConfirmation.style.display = 'block';
+    form.style.display = 'none';
+
+
 })
 
 function mailvalide(email) {
