@@ -14,6 +14,7 @@ form.addEventListener('submit', function (event) {
     const prenom = document.getElementById('prenom').value.trim();
     const mail = document.getElementById('mail').value.trim();
     const photo = document.getElementById('photo').value.trim();
+    const photoInput = document.getElementById('photo');
     const description = document.getElementById('description').value.trim();
 
     const erreurs = [];
@@ -42,6 +43,17 @@ form.addEventListener('submit', function (event) {
         messageErreur('photo', 'Le fichier doit être au format JPG, PNG ou GIF.');
 
     }
+
+    if (photoInput.files.length > 0) {
+        const photo = photoInput.files[0];
+        const photoSize = photo.size; // Taille du fichier en octets
+        const maxSize = 2 * 1024 *1024; // 2 Mo (en octets)
+
+        if (photoSize > maxSize) {
+            messageErreur('photo', 'La taille du fichier dépasse la limite autorisée (2 Mo).');
+        }
+    }
+
     if (description.length < 2 || description.length > 1000) {
         messageErreur('description', 'La description doit contenir entre 2 et 1000 caractères.');
 
