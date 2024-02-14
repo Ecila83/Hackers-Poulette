@@ -46,8 +46,8 @@ form.addEventListener('submit', function (event) {
 
     if (photoInput.files.length > 0) {
         const photo = photoInput.files[0];
-        const photoSize = photo.size; // Taille du fichier en octets
-        const maxSize = 2 * 1024 *1024; // 2 Mo (en octets)
+        const photoSize = photo.size; 
+        const maxSize = 2 * 1024 *1024; 
 
         if (photoSize > maxSize) {
             messageErreur('photo', 'La taille du fichier dépasse la limite autorisée (2 Mo).');
