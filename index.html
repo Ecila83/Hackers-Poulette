@@ -24,6 +24,11 @@
           method="post"
           enctype="multipart/form-data"
       >
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+    <h1 class="text-center bg-red-200">Hackers Poulette</h1>
+    <form id = "form" action="./Php/read.php" method="post" enctype="multipart/form-data">
         <div class="form_nom">
           <!-- <label for="nom">Nom</label> -->
           <input id="nom" type="text" placeholder="Nom" name="nom" value="" class= "ring-1 ring-pink-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-teal-300" />
@@ -59,6 +64,15 @@
         </div>
         <div class=>
           <input id="boutton" type="submit" value="Soumettre" class= "inline-block self-end bg-purple-400 text-white font-bold rounded-lg px-6 py-2"  />
+        <div class="form_captcha">
+            <label for="captcha">Captcha</label>
+            <img id="captchaImage" src="./Php/captcha.php" alt="Captcha">
+            <input id="captcha" type="text" name="captcha" required>
+            <span id="captcha-error" class="error-message"></span>
+        </div>
+        <div class="form_boutton">
+           
+            <input id= "boutton" type="submit" value="Soumettre" >
         </div>
 </div>
 </div>
