@@ -54,7 +54,7 @@ form.addEventListener('submit', function (event) {
     messageConfirmation.style.display = 'block';
     form.style.display = 'none';
 
-
+    form.submit();
 })
 
 function mailvalide(email) {
