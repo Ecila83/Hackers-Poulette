@@ -1,46 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./dist/style.css">
     <script type="module" src="./js/validationClient.js" defer></script>
-    <link rel="stylesheet" href="dist/style.css">
-</head>
-<body>
-    <h1 class="text-center bg-red-200">Hackers Poulette</h1>
-    <form id = "form" action="" method="post" enctype="multipart/form-data">
+
+
+  </head>
+  <body class= "bg-gray-100">
+    <div class= "flex w-full min-h-screen justify-center items-center">
+      <div class=" bg-purple-400 space-y-4 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white">
+    
+      <div class="flex-col items-center space-y-0 justify-between">
+        <div>
+          <h1 class="font-bold text-4xl text-center tracking-wide">Hackers Poulette</h1>
+        </div>
+        <div class="bg-purple-600 flex-col justify-center rounded-xl shadow-lg p-8">
+          <form
+          class="flex flex-col items-center space-y-4"
+          action="read.php"
+          method="post"
+          enctype="multipart/form-data"
+      >
         <div class="form_nom">
-            <label  for="nom">Nom</label>
-            <input id="nom" type="text" name="nom" value="">
-            <span id="nom-error" class="error-message"></span>
+          <!-- <label for="nom">Nom</label> -->
+          <input id="nom" type="text" placeholder="Nom" name="nom" value="" class= "ring-1 ring-pink-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-teal-300" />
+          <span id="nom-error" class="error-message"></span>
         </div>
         <div class="form_prenom">
-            <label  for="prenom">Prénom</label>
-            <input id="prenom" type="text" name="prenom" value="">
-            <span id="prenom-error" class="error-message"></span>
+          <!-- <label for="prenom">Prénom</label> -->
+          <input id="prenom" type="text" placeholder="Prénom" name="prenom" value="" class= "ring-1 ring-pink-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-purple-700"  />
+          <span id="prenom-error" class="error-message"></span>
         </div>
         <div class="form_mail">
-            <label  for="mail">Adresse mail</label>
-            <input id="mail" type="text" name="mail" value="">
-            <span id="mail-error" class="error-message"></span>
+          <!-- <label for="mail">adresse mail</label> -->
+          <input id="mail" type="text" placeholder="Email" name="mail" value="" class= "ring-1 ring-pink-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-purple-700"  />
+          <span id="mail-error" class="error-message"></span>
         </div>
-        <div class="form_photo">
-            <label for="photo">Photo (jpg, png, gif) :</label>
-            <input id="photo" type="file"  name="photo" accept=".jpg, .png, .gif">
-            <span id="photo-error" class="error-message"></span>
-        </div>
+        
 
         <div class="form_description">
-            <label for="description">Décrire votre probléme</label>
-            <input id="description" type="text" name="description" value="">
-            <span id="description-error" class="error-message"></span>
+          <!-- <label for="description">Décrire votre probléme</label> -->
+          <input id="description" type="text" placeholder="description" name="description" value="" class= "ring-1 ring-blue-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-purple-700" />
+          <span id="description-error" class="error-message"></span>
         </div>
-        <div class="form_boutton">
-           
-            <input id= "boutton" type="submit" value="Soumettre" >
+        <div class="form_photo">
+          <!-- <label for="photo">Photo (jpg, png, gif) :</label> -->
+          <input
+          placeholder="photo"
+            id="photo"
+            type="file" class="inline-block self-end bg-purple-400 text-white font-bold rounded-lg px-6 py-2"
+            name="photo"
+            accept=".jpg, .png, .gif"
+          />
+          <span id="photo-error" class="error-message"></span>
         </div>
-       
-    </form>
-</body>
+        <div class=>
+          <input id="boutton" type="submit" value="Soumettre" class= "inline-block self-end bg-purple-400 text-white font-bold rounded-lg px-6 py-2"  />
+        </div>
+</div>
+</div>
+</div>
+      </form>
+    </div>
+  </body>
 </html>
