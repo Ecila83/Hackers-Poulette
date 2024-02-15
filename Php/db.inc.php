@@ -1,4 +1,5 @@
 <?php
+
 function connect_db() {
     $dsn = 'mysql:dbname=hackers_poulette;host=db';
     $user = 'root';
@@ -7,5 +8,3 @@ function connect_db() {
 
     return $pdo;
 }
-?>
-
