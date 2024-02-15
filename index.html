@@ -9,15 +9,15 @@
 
 
   </head>
-  <body class= "bg-gray-100">
+  <body class= "bg-pink-100">
     <div class= "flex w-full min-h-screen justify-center items-center">
-      <div class=" bg-purple-400 space-y-4 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white">
+      <div class=" bg-pink-300 space-y-4 w-full max-w-4xl p-8 rounded-xl shadow-lg text-orange-400">
     
       <div class="flex-col items-center space-y-0 justify-between">
         <div>
-          <h1 class="font-bold text-4xl text-center tracking-wide">Hackers Poulette</h1>
+          <h1 class="font-bold text-4xl text-center tracking-wide text-pink-500">Hackers Poulette</h1>
         </div>
-        <div class="bg-purple-600 flex-col justify-center rounded-xl shadow-lg p-8">
+        <div class="bg-pink-600 flex-col justify-center rounded-xl shadow-lg p-8">
           <form
           class="flex flex-col items-center space-y-4"
           action="./Php/read.php"
@@ -26,43 +26,37 @@
       >
         <div class="form_nom">
          
-          <input id="nom" type="text" placeholder="Nom" name="nom" value="" class= "ring-1 ring-pink-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-teal-300" />
+          <input id="nom" type="text" placeholder="Nom" name="nom" value="" class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none " />
           <span id="nom-error" class="error-message"></span>
         </div>
         <div class="form_prenom">
         
-          <input id="prenom" type="text" placeholder="Prénom" name="prenom" value="" class= "ring-1 ring-pink-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-purple-700"  />
+          <input id="prenom" type="text" placeholder="Prénom" name="prenom" value="" class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none"  />
           <span id="prenom-error" class="error-message"></span>
         </div>
         <div class="form_mail">
          
-          <input id="mail" type="text" placeholder="Email" name="mail" value="" class= "ring-1 ring-pink-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-purple-700"  />
+          <input id="mail" type="email" placeholder="Email" name="mail" value="" class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none" />
           <span id="mail-error" class="error-message"></span>
         </div>
         
 
         <div class="form_description">
-          <input id="description" type="text" placeholder="description" name="description" value="" class= "ring-1 ring-blue-100 w-100px rounded-md px-4 py-2 outline-none focus: ring-2 focus: ring-purple-700" />
-          <span id="description-error" class="error-message"></span>
-        </div>
-        <div class="form_photo">
-          <input
-          placeholder="photo"
-            id="photo"
-            type="file" class="inline-block self-end bg-purple-400 text-white font-bold rounded-lg px-6 py-2"
-            name="photo"
-            accept=".jpg, .png, .gif"
-          />
-          <span id="photo-error" class="error-message"></span>
+          <input placeholder="description" id="description" type="text" name="description" required class="bg-pink-100  w-100 rounded-md px-4 py-2 outline-none focus:w-200 " >
+        </input>
+            <span id="description-error" class="error-message"></span>
         </div>
         <div class="form_captcha">
-          <label for="captcha">Captcha</label>
           <img id="captchaImage" src="./Php/captcha.php" alt="Captcha">
-          <input id="captcha" type="text" name="captcha" required>
+          <input id="captcha" placeholder="Captcha" required class="bg-pink-100 w-100px rounded-md px-4 py-2 outline-none "/>
           <span id="captcha-error" class="error-message"></span>
       </div>
-        <div class=>
-          <input id="boutton" type="submit" value="Soumettre" class= "inline-block self-end bg-purple-400 text-white font-bold rounded-lg px-6 py-2"  />
+        <div class="form_photo">
+          <input placeholder="photo" id="photo" type="file" class="" name="photo" accept=".jpg, .png, .gif"/>
+          <span id="photo-error" class="error-message"></span>
+        </div>
+        <div>
+          <input id="boutton" type="submit" value="Soumettre" class= "inline-block self-end bg-orange-400 text-white font-bold rounded-lg px-6 py-2"  />
         
        
             
