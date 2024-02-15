@@ -22,7 +22,11 @@ $mail->SMTPAuth = true;
 $mail->Username = 'hanenwechteti27@gmail.com';  //mail: permet d'acceder a attriburt user name de l'object creer
 $mail->Password = 'ztsy naxp xvvj wcos'; // le mot de passe que je viens de le creer
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-$mail->Port = 465;                       
+$mail->Port = 465;  
+
+//recipients
+$mail->setFrom('from@example.com','PHPMailer');
+$mail->AddAdress('hanenwechtetii12@gmail.com');
 
 //content
 $mail->isHTML(true);
