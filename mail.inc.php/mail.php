@@ -14,7 +14,6 @@ require 'path/to/PHPMailer/src/Exception.php';
 require 'path/to/PHPMailer/src/PHPMailer.php';
 require 'path/to/PHPMailer/src/SMTP.php';
  
-
     $mail = new PHPMailer(true);
     try{
 $mail->IsSMTP();
@@ -26,13 +25,11 @@ $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Port = 465;                       
 
 //content
-//$mail->setFrom($from_email, $from_name); //le message est envoyé par $from_email
-//$mail->addAdress('hanenwechtetii12@gmail.com','');
 $mail->isHTML(true);
 $mail->Subject ='here is the subject';
 $mail->Body    =$message;
 $mail->AltBody ='this is the body in the plain text for non-HTML mail clients';
-//$mail->setLanguage('fr','/optional/path/to/language/directory/'); // pour charger la version francaise
+
 $mail->send();
 echo'message has been sent';
     } catch (Exception $e) {
