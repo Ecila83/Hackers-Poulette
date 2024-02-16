@@ -19,17 +19,15 @@ async function main() {
         const trElm = document.createElement('tr');
 
         trElm.append(tdText(row.id));
-        // ----- Cree 1 td "a la main"
+  
         const tdNom = document.createElement('td');
         tdNom.innerText = row.nom;
         trElm.append(tdNom);
-        // -----
-
-        // ----- Cree 3 td via une fonction
+    
         trElm.append(tdText(row.prenom));
         trElm.append(tdText(row.mail));
         trElm.append(tdText(row.description));
-        // -----
+ 
 
         const tdImage = document.createElement('td');
         const tdImageImg = document.createElement('img');
@@ -77,20 +75,19 @@ const createStatusDropdown = (currentState, contactId) => {
 
 async function updateStatus(contactId, newStatus) {
     try {
+        let formData = new FormData();
+        formData.append('id', contactId);
+        formData.append('statut', newStatus);
+
         const response = await fetch('./data.php', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                id: contactId,
-                statut: newStatus,
-            }),
+            body: formData
         });
+
         if (!response.ok) {
             throw new Error('Failed to update status');
         }
-        await main();
+
         console.log('Status updated successfully');
     } catch (error) {
         console.error('Error updating status:', error);

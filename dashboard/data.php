@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'], $_POST['statut']
         $sth = $pdo->prepare("UPDATE contacts SET statut = ? WHERE id = ?");
         $sth->execute([$newStatus, $contactId]);
 
-        header('Location: ' . $_SERVER['REQUEST_URI']);
+
+        echo json_encode(['success' => true]);
         exit();
     } else {
 
