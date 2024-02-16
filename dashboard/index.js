@@ -15,6 +15,17 @@ async function main() {
     const data = await fetchAllData();
     const tableElm = document.createElement('table');
     tableElm.setAttribute('border', '1');
+    tableElm.style.margin = 'auto'; 
+
+    const enteteColonnes = document.createElement('tr');
+    const entetes = ['ID', 'Nom', 'Prénom', 'E-mail', 'Description', 'Photo', 'Statut'];
+    entetes.forEach(enteteText => {
+        const thElm = document.createElement('th');
+        thElm.textContent = enteteText;
+        enteteColonnes.appendChild(thElm);
+    });
+
+    tableElm.appendChild(enteteColonnes);
 
     data.forEach(row => {
         const trElm = document.createElement('tr');
@@ -34,6 +45,8 @@ async function main() {
         const tdImage = document.createElement('td');
         const tdImageImg = document.createElement('img');
         tdImageImg.src = row.photo;
+        tdImageImg.style.width = '350px';
+        tdImageImg.style.height = 'auto';
         tdImage.append(tdImageImg);
         trElm.append(tdImage);
 
