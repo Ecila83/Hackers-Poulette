@@ -24,9 +24,7 @@ L'objectif principal est de créer un formulaire de contact entièrement fonctio
    - Soumettez le formulaire.
    - Recevez une confirmation par e-mail (si toutes les saisies sont valides).
 
-## Comment Utiliser
-
-##  Administrateur (En Ligne)
+###  Administrateur (En Ligne)
 
 1. **Accès au Tableau de Bord Admin :**
    - Connectez-vous à l'administration via [lien_admin](https://alice-becode.funquality.be/Hackers-Poulette/dashboard/index.html).
@@ -63,7 +61,6 @@ L'objectif principal est de créer un formulaire de contact entièrement fonctio
 ![Form Screenshot](<Capture d'écran 2024-02-16 122330.png>)
 
 ![Admin Dashboard](url_vers_dashboard.png)
-
 
 ## collaborateurs
 
