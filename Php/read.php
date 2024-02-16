@@ -3,6 +3,7 @@ session_start();
 
 require_once("./db.inc.php");
 require_once("./mail.inc.php");
+
 $pdo = connect_db();
 
 $errors = [];
@@ -63,6 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (!$succes) {
                     $errors[] = "Erreur SQL : " . $stm->errorInfo()[2];
                 }
+
+                envoi_mail($nom . ", " . $prenom, $email, $description);
             }
         }
     } 
@@ -72,10 +75,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 unset($_SESSION['captcha']);
 
-    if (!empty($errors)) {
-        foreach ($errors as $error) {
-            echo $error . "<br>";
-        }
-    } else {
-        echo "Les données ont été enregistrées avec succès.";
+if (!empty($errors)) {
+    foreach ($errors as $error) {
+        echo $error . "<br>";
     }
+} else {
+    echo "Les données ont été enregistrées avec succès.";
+}
