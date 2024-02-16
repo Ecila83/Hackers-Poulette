@@ -36,8 +36,15 @@ async function main() {
         trElm.append(tdImage);
 
         const tdStatus = document.createElement('td');
-        tdStatus.appendChild(createStatusDropdown(row.statut, row.id));
+        tdStatus.append(createStatusDropdown(row.statut, row.id));
         tdStatus.dataset.contactId = row.id;
+        const deleteButon = document.createElement('button');
+        deleteButon.innerText='suprimer';
+        deleteButon.addEventListener('click',()=>{
+            trElm.remove();
+            updateDeleted(row.id);
+        })
+        tdStatus.append(deleteButon);
         trElm.append(tdStatus);
 
         tableElm.append(trElm);
@@ -94,10 +101,33 @@ async function updateStatus(contactId, newStatus) {
     }
 }
 
+async function updateDeleted(contactId) {
+    try {
+        let formData = new FormData();
+        formData.append('id', contactId);
+        formData.append('deleted', 1);
+
+        const response = await fetch('./data.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to update deleted');
+        }
+
+        console.log('deleted updated successfully');
+    } catch (error) {
+        console.error('Error updating deleted:', error);
+    }
+}
+
 const tdText = (text) => {
     const td = document.createElement('td');
     td.innerText = text;
     return td;
 };
+
+
 
 

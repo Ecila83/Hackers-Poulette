@@ -27,8 +27,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'], $_POST['statut']
     exit();
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'], $_POST['deleted'])) {
+    $contactId = $_POST['id'];
+    $deleted = $_POST['deleted'];
 
-$sth = $pdo->prepare("SELECT * FROM contacts");
+    $sth = $pdo->prepare("UPDATE contacts SET deleted = ? WHERE id = ?");
+    $sth->execute([$deleted, $contactId]);
+    echo json_encode(['success' => true]);
+
+    exit();
+}
+
+$sth = $pdo->prepare("SELECT * FROM contacts where deleted = 0");
 $sth->execute();
 $result = $sth->fetchAll();
 
