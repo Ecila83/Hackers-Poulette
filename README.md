@@ -41,5 +41,5 @@ Alice Marique
 Hanen Wechteti
 
 ## Ressources
-- [Base de donnée] hackers poulette.sql
+- [Base de donnée] hackers_poulette.sql
 - [Classe PHP Mailer](https://github.com/PHPMailer/PHPMailer)
