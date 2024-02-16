@@ -25,38 +25,43 @@
           >
         <div class="flex flex-col items-center">
          
-          <input id="nom" type="text" placeholder="Nom" name="nom" value=""  class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none " />
+          <input id="nom" type="text" placeholder="Nom" name="nom" value=""  class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none placeholder-orange-400" />
           <span id="nom-error" class="error-message"></span>
         </div>
         <div class="flex flex-col items-center">
         
-          <input id="prenom" type="text" placeholder="Prénom" name="prenom" value=""  class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none"  />
+          <input id="prenom" type="text" placeholder="Prénom" name="prenom" value=""  class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none placeholder-orange-400"  />
           <span id="prenom-error" class="error-message"></span>
         </div>
         <div class="flex flex-col items-center">
          
-          <input id="mail" type="text" placeholder="Email" name="mail" value="" class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none" />
+          <input id="mail" type="text" placeholder="Email" name="mail" value="" class= "bg-pink-100 w-100px rounded-md px-4 py-2 outline-none placeholder-orange-400" />
           <span id="mail-error" class="error-message"></span>
         </div>
         
 
         <div class="flex flex-col items-center">
-          <input placeholder="description" id="description" type="text" name="description"  class="bg-pink-100  w-100 rounded-md px-4 py-2 outline-none focus:w-200 " >
+          <input placeholder="Description" id="description" type="text" name="description"  class="bg-pink-100 mb-4 w-100 rounded-md px-4 py-2 outline-none focus:w-200 placeholder-orange-400 " >
         </input>
             <span id="description-error" class="error-message"></span>
         </div>
-        <div class="flex flex-col items-center">
-          <input placeholder="photo" id="photo" type="file" class="" name="photo" required accept=".jpg, .png, .gif"/>
+
+        <div class="flex flex-col items-center relative">
+          <input type="file" name="photo" id="photo" class="hidden" accept=".jpg, .png, .gif">
+          <label for="photo" class="bg-orange-400 text-white py-2 px-4 rounded-md font-bold cursor-pointer">
+              Ajouter une photo
+          </label>
           <span id="photo-error" class="error-message"></span>
-        </div>
+      </div>
+      
         <div class="flex flex-col items-center">
           <img id="captchaImage" src="./Php/captcha.php" alt="Captcha" class="bg-pink-100 w-full h-full rounded-md mt-3">
-          <input id="captcha" type="text" name="captcha" placeholder="Captcha" class="bg-pink-100 w-100px rounded-md mt-3 px-4 py-2 outline-none">
+          <input id="captcha" type="text" name="captcha" placeholder="Captcha" class="bg-pink-100 w-100px rounded-md mt-4 px-4 py-2 outline-none placeholder-orange-400">
           <span id="captcha-error" class="error-message"></span>
       </div>
        
         <div>
-          <input id="boutton" type="submit" value="Soumettre" class= "inline-block self-end bg-orange-400 text-white font-bold rounded-lg px-6 py-2"  />
+          <input id="boutton" type="submit" value="Soumettre" class= "inline-block self-end bg-orange-400 text-white font-bold rounded-lg px-6 py-2  cursor-pointer"  />
         
        
             
