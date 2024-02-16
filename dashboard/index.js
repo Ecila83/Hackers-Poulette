@@ -14,6 +14,7 @@ async function fetchAllData() {
 async function main() {
     const data = await fetchAllData();
     const tableElm = document.createElement('table');
+    tableElm.setAttribute('border', '1');
 
     data.forEach(row => {
         const trElm = document.createElement('tr');
@@ -21,6 +22,7 @@ async function main() {
         trElm.append(tdText(row.id));
   
         const tdNom = document.createElement('td');
+        tdNom.style.border = '1px solid black';
         tdNom.innerText = row.nom;
         trElm.append(tdNom);
     

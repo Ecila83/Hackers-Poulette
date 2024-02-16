@@ -4,7 +4,7 @@ session_start();
 header("Content-type: image/png");
 
 $image = imagecreate(200, 50);
-$bg_color = imagecolorallocate($image, 255, 255, 255);
+$bg_color = imagecolorallocate($image, 255,228,230);
 $text_color = imagecolorallocate($image, 0, 0, 0);
 $captchaText = genererCaptcha();
 $_SESSION['captcha'] = $captchaText;
