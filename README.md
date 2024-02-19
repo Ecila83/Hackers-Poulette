@@ -16,7 +16,7 @@ L'objectif principal est de créer un formulaire de contact entièrement fonctio
 ### Utilisateur (En Ligne)
 
 1. **Accès à l'Application en Ligne :**
-   - Rendez-vous sur [Hackers_Poulette sur GitHub Pages](https://alice-becode.funquality.be/Hackers-Poulette/index.html).
+   - Rendez-vous sur (https://alice-becode.funquality.be/Hackers-Poulette/index.html).
 
 2. **Soumission du Formulaire :**
    Entrez votre nom, prénom, adresse e-mail, sélectionnez un fichier (optionnel), et décrivez votre demande.
@@ -29,7 +29,7 @@ L'objectif principal est de créer un formulaire de contact entièrement fonctio
 ##  Administrateur (En Ligne)
 
 1. **Accès au Tableau de Bord Admin :**
-   - Connectez-vous à l'administration via [lien_admin](https://alice-becode.funquality.be/Hackers-Poulette/dashboard/index.html).
+   - Connectez-vous au tableau administrateur (https://alice-becode.funquality.be/Hackers-Poulette/dashboard/index.html).
 
 2. **Gestion des Messages :**
    - Visualisez les messages reçus.
@@ -47,7 +47,7 @@ L'objectif principal est de créer un formulaire de contact entièrement fonctio
 
 3. **Lancement de l'Application en Local :**
    - Démarrez le serveur local .
-   - Accédez à l'application via `http://localhost:8000`.
+   - Accédez à l'application .
 
 
    ### Configuration Additionnelle
